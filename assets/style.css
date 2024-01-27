@@ -1,0 +1,82 @@
+/* Banner Styling */
+.banner {
+    background-color: #b09ce5;  /* Change color as per theme */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-bottom: 30px; /* Adjust this value as needed for space */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+.story-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.story-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story, .story-score {
+    padding: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .story-list li {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .story-list li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
